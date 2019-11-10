@@ -1,4 +1,4 @@
-#Arthematic
+# Arthematic
 ** Basic Arthematic **
 Base_Number=10
 - Addition      {Base_Number+3}  =13
