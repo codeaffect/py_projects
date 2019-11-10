@@ -2,7 +2,7 @@
 py-stuff
 
 
-##strings
+**strings**
 - hello.py 
   Basic strings with index, concat 
 - manipulations.py
