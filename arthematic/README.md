@@ -1,5 +1,5 @@
 # Arthematic
-** Basic Arthematic **
+**Basic Arthematic**
 Base_Number=10
 - Addition      {Base_Number+3}  =13
 - Substraction  {Base_Number-3}  =10
@@ -9,7 +9,7 @@ Base_Number=10
 - Power         {Base_Number**3} =1000
 - Exponent      {Base_Number%3}  =1
 
-** Augumented Arthematic **
+**Augumented Arthematic**
 Base_Number=10
 - Addition      {Base_Number+=3}  =13 (new Base_Number)
 - Substraction  {Base_Number-=3}  =10 (new Base_Number)
