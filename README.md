@@ -1,6 +1,8 @@
 # py_projects
-**/strings** 
+
+**strings** 
 -String manipulations
-**/arithematic**
+
+**arithematic**
 -Basic + - / * % 
 
