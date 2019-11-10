@@ -1,13 +1,6 @@
 # py_projects
-**py-stuff**
+**/strings** 
+-String manipulations
+**/arithematic**
+-Basic + - / * % 
 
-
-**strings**
-- hello.py 
-  - Basic strings with index, concat 
-- manipulations.py
-  - Find()
-  - Replace()
-  - Title()
-  - Lower()
-  - Upper()
