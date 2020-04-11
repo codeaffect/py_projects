@@ -1,0 +1,6 @@
+m = int(input())
+mset = set(list(map(int, input().split())))
+n = int(input())
+nset = set(list(map(int, input().split())))
+m_n = sorted(list(mset.symmetric_difference(nset)))
+print(*m_n, sep='\n')
