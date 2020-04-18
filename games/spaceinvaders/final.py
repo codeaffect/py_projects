@@ -17,7 +17,7 @@ with open(infile) as inputfile:
         names = row[0].split()
         if len(names) > 1:
             # print(names[0], "-", names[1])
-            row[1], row[0] = names[0], names[1]
+            row[0] = ",".join({names[0], names[1]})
         result = ",".join(row)
         # print(result)
         finalfile.append(result)
