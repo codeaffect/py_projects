@@ -1,11 +1,8 @@
 import sys
 import os
+import subprocess
+import json
 from github import Github
-
-#token = '71a9aae88340b1e8ac4cf7ad6d3e076374d3af1a'
-
-# for a in os.environ:
-#     print('Var: ', a, 'Value: ', os.getenv(a))
 
 # get folder name from parameters
 folder_name = sys.argv[1]
@@ -42,7 +39,10 @@ if already_exists:
     print(' >>>>>> repo already exists! <<<<<<<')
     exit
 
+print(' creating repo.....')
+user_info.create_repo(folder_name)
 exit
+
 # create local folder
 os.mkdir(_dir)
 
@@ -51,13 +51,15 @@ login = user_info.login
 
 print('login: %s' % login)
 
+f = open(_dir+'/README.MD', "w+")
+f.write(f"# {folder_name.upper()}")
+
+os.chdir(_dir)
+
 # set of git hub commands
 # - git init, git remote add, git add, git commit, git push
-commands = [f'echo "# {folder_name.upper()}" > README.md',
-            f'cd {_dir}',
-            f'echo {_dir}',
-            'git init',
-            f'git remote add origin git@github.com:{login}/{folder_name}.git',
+commands = ['git init',
+            f'git remote add origin https://github.com/{login}/{folder_name}',
             'git add .',
             'git commit -m "Initial commit"',
             'git push -u origin master']
@@ -65,6 +67,7 @@ commands = [f'echo "# {folder_name.upper()}" > README.md',
 print('** Creating repo .......')
 
 for c in commands:
+    # print('>>>>  ----', c)
     os.system(c)
 
 print('%s created locally' % folder_name)
