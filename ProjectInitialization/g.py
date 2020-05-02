@@ -61,7 +61,7 @@ def CreateFolder(folder_name, parent_repo):
         'git rebase origin/master',
         'git add .',
         f'git commit -m "Initial commit - {folder_name}',
-        f'code .{folder_name}',
+        f'code {folder_name}',
     ]
     print('** ** **  .......')
 
