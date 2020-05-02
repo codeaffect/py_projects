@@ -19,7 +19,7 @@ def CreateFolder(folder_name, parent_repo):
     # set variables
     path = "c:/github/"
     _parent_repo_path = path + parent_repo
-    _dir = _parent_repo_path + folder_name
+    _dir = f'{_parent_repo_path}/{folder_name}'
 
     if os.path.exists(_dir):
         print('>>>>>>>>>>>>>> git folder exists locally! <<<<<')
@@ -52,12 +52,16 @@ def CreateFolder(folder_name, parent_repo):
     f = open(_dir+'/README.MD', "w+")
     f.write(f"# {folder_name.upper()}")
 
+    print(f'current folder:{_parent_repo_path}')
+#f'git clone https://github.com/{ulogin}/{parent_repo}.git {parent_repo}',
+
     # call git commands
     commands = [
-        f'git clone https://github.com/{ulogin}/{parent_repo}.git {parent_repo}',
+        'git fetch origin',
+        'git rebase origin/master',
         'git add .',
         f'git commit -m "Initial commit - {folder_name}',
-        'code .',
+        f'code .{folder_name}',
     ]
     print('** ** **  .......')
 
