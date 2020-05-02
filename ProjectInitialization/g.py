@@ -58,9 +58,10 @@ def CreateFolder(folder_name, parent_repo):
     # call git commands
     commands = [
         'git fetch origin',
-        'git rebase origin/master',
-        'git add .',
+        'git rebase origin',
+        f'git add .',
         f'git commit -m "Initial commit - {folder_name}',
+        f'git push -u origin master'
         f'code {folder_name}',
     ]
     print('** ** **  .......')
